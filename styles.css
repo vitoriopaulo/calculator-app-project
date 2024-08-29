@@ -130,6 +130,57 @@ button.dark-mode {
     border: 1px solid #444;
 }
 
+button {
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #4a4a4a;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.zero {
+    grid-column: span 2;
+    width: 135px;
+    border-radius: 30px;
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1em;
+    }
+
+    .zero {
+        width: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        font-size: 1em;
+    }
+
+    .zero {
+        grid-column: span 3;
+        width: auto;
+    }
+}
 
 
