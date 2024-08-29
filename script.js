@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 } else if (button.textContent === '∛') {
                     const value = parseFloat(result.value); // Parse the current value
-                    if (!isNaN(value)) {
-                        result.value = Math.cbrt(value).toString(); // Calculate cubic root and update display
+                    if (!isNaN(value) && value >= 0) {
+                        result.value = Math.cbrt(value).toString(); // Calculate cube root and update display
                     } else {
                         result.value = 'Error'; // Handle invalid input
                     }
