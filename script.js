@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const result = document.getElementById('result');
     const buttons = document.querySelectorAll('button');
+    let memory = 0; // Variable to store memory value
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -10,18 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 result.value = '';
             } else if (button.classList.contains('equals')) {
                 try {
-                    // Replace symbols for eval compatibility
-                    result.value = eval(result.value.replace('×', '*').replace('÷', '/'));
+                    // Handle exponentiation
+                    result.value = eval(result.value.replace('×', '*').replace('÷', '/').replace('^', '**'));
                 } catch (error) {
                     result.value = 'Error';
                 }
-            } else if (button.classList.contains('percentage')) {
-                try {
-                    if (result.value) {
-                        result.value = parseFloat(result.value) / 100;
-                    }
-                } catch (error) {
-                    result.value = 'Error';
+            } else if (button.classList.contains('memory')) {
+                if (button.id === 'memory-add') {
+                    memory += parseFloat(result.value) || 0; // Add current value to memory
+                    result.value = ''; // Clear display after memory operation
+                } else if (button.id === 'memory-recall') {
+                    result.value = memory; // Recall memory value
                 }
             }
         });
