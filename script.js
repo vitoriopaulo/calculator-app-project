@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 result.value = '';
             } else if (button.classList.contains('equals')) {
                 try {
+                    // Replace symbols for eval compatibility
                     result.value = eval(result.value.replace('×', '*').replace('÷', '/'));
                 } catch (error) {
                     result.value = 'Error';
@@ -25,4 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Dark Mode Toggle
+    const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
+    if (toggleDarkModeButton) {
+        toggleDarkModeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            buttons.forEach(button => button.classList.toggle('dark-mode'));
+        });
+    }
 });

@@ -20,7 +20,6 @@ body {
 }
 
 .calculator-title {
-    font-family: 'Raleway', sans-serif;
     font-size: 2.5em;
     font-weight: 700;
     color: #adff2f !important;
@@ -117,6 +116,18 @@ button:active {
 .footer .fa-heart {
     color: #ff3b30;
     margin: 0 5px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+button.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
 }
 
 
