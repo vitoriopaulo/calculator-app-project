@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 result.value = '';
             } else if (button.classList.contains('equals')) {
                 try {
-                    // Handle exponentiation
+                    // Handle exponentiation and evaluate the expression
                     result.value = eval(result.value.replace('×', '*').replace('÷', '/').replace('^', '**'));
                 } catch (error) {
                     result.value = 'Error';
