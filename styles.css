@@ -108,19 +108,20 @@ button:active {
 
 .footer {
     font-size: 1em;
-    color: #f0f0f0 !important;
+    color: #f0f0f0;
     text-align: center;
     margin-top: 20px;
 }
 
 footer {
+    font-size: 1em;
     padding: 10px; /* Reduced padding for white space */
     color: #fff; /* Set text color for readability */
     text-align: center; /* Center the footer text */
     margin-top: 20px; /* Add margin to separate it from the content above */
 }
 
-footer .fa {
+.fa-solid, .fa-heart {
     color: red !important; /* Change Font Awesome icon color to red */
 }
 
