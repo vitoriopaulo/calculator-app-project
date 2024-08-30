@@ -136,42 +136,40 @@ button.dark-mode {
     border: 1px solid #444;
 }
 
-footer .fa {
-    color: red !important;
-  }
-
 /* Media Queries for Responsiveness */
 @media (max-width: 480px) {
     .calculator-title {
-      font-size: 1.3em;
+        font-size: 1.3em; /* Font size for small screens */
     }
-  
+
     .calculator {
-      width: 100%;
-      border-radius: 0;
-      padding: 20px;
+        width: 90%; /* Make the calculator container responsive */
+        max-width: 400px; /* Set a maximum width */
+        border-radius: 10px; /* Slightly round the corners */
+        padding: 20px; /* Add padding */
     }
-  
+
     #result {
-      height: 60px;
-      font-size: 2em;
+        height: 60px; /* Adjust height */
+        font-size: 2em; /* Font size for the result display */
     }
-  
+
     .buttons {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
+        grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+        gap: 10px; /* Space between buttons */
+        padding: 0 10px; /* Add horizontal padding */
     }
-  
+
     button {
-      width: 50px;
-      height: 50px;
-      font-size: 1.2em;
-      padding: 10px;
+        width: 50px; /* Button width */
+        height: 50px; /* Button height */
+        font-size: 1.2em; /* Font size for buttons */
+        padding: 0; /* Remove padding */
     }
-  
+
     .zero {
-      grid-column: span 2;
-      width: auto;
-      border-radius: 25px;
+        grid-column: span 2; /* Make the zero button wider */
+        width: auto; /* Allow auto width */
+        border-radius: 25px; /* Round corners */
     }
-  }
+}
