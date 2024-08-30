@@ -57,7 +57,8 @@ body {
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 10px;
+    padding: 0 10px; /* Add horizontal padding */
 }
 
 button {
